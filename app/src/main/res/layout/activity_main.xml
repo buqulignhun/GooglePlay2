@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/dl_main_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--左侧侧滑菜单-->
+    <FrameLayout
+        android:layout_width="180dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#ff0000" />
+
+
+    <!--右侧侧滑菜单-->
+    <FrameLayout
+        android:layout_width="180dip"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:background="#00ff00" />
+
+    <!--内容部分-->
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.MainActivity">
+
+        <com.astuetz.PagerSlidingTabStripExtend xmlns:yubin="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            yubin:pstsIndicatorHeight="8dip"
+
+            yubin:tabSelectedTextColor="@color/tab_text_selected"
+            yubin:tabSelectedTextSize="18sp"
+            yubin:tabTextColor="@color/tab_text_normal"
+            yubin:tabTextSize="16sp"
+
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!--  <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Hello World!" />-->
+    </LinearLayout>
+</android.support.v4.widget.DrawerLayout>
